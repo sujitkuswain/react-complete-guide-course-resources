@@ -1,0 +1,25 @@
+export default function GameBoard({onSelectSquare, board}) {
+    return (
+        <ol id="game-board">
+            {
+                board.map((row, rIndex) => (
+                    <li key={rIndex}>
+                        <ol>
+                            {row.map((col, cIndex) => (
+                                <li key={cIndex}>
+                                    <button
+                                        onClick={() => onSelectSquare(rIndex, cIndex)}
+                                        disabled={col !== null}
+                                        style={{cursor: col === null ? 'pointer' : 'not-allowed'}}
+                                    >
+                                        {col}
+                                    </button>
+                                </li>
+                            ))}
+                        </ol>
+                    </li>
+                ))
+            }
+        </ol>
+    )
+}
