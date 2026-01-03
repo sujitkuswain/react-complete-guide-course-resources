@@ -2,7 +2,7 @@ import InputField from "./InputItem.jsx";
 
 export default function UserInputs({inputValues, handleChange}) {
     return (
-        <div id="user-input">
+        <section id="user-input">
             <div className="input-group">
                 <InputField
                     name="initialInvestment"
@@ -27,6 +27,6 @@ export default function UserInputs({inputValues, handleChange}) {
                     value={inputValues.duration}
                     onChange={handleChange}/>
             </div>
-        </div>
+        </section>
     );
 }
