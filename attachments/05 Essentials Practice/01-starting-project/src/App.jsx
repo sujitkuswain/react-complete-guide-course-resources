@@ -1,8 +1,8 @@
 import Result from "./components/Result.jsx";
 import Header from "./components/Header.jsx";
-import UserInput from "./components/UserInput.jsx";
 import {useEffect, useState} from "react";
 import {calculateInvestmentResults} from "./util/investment.js";
+import UserInputs from "./components/UserInputs.jsx";
 
 function App() {
 
@@ -34,7 +34,7 @@ function App() {
     return (
         <>
             <Header/>
-            <UserInput inputValues={input} handleChange={handleChange}/>
+            <UserInputs inputValues={input} handleChange={handleChange}/>
             <Result initialInvestment={input.initialInvestment} result={result}/>
         </>
     )
