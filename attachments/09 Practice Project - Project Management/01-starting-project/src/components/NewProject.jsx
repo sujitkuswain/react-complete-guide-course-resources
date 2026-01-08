@@ -29,8 +29,8 @@ export default function NewProject({saveProject, handleCancelProject}) {
     return (
         <>
             <Modal ref={modal}>
-                <h2>Error</h2>
-                <p className="p-4">All fields are required!</p>
+                <h2 className="text-xl text-stone-700 my-4 font-bold">Error</h2>
+                <p className="mb-4 text-stone-600">All fields are required!</p>
             </Modal>
             <div className="w-[35rem] mt-16">
                 <div>
